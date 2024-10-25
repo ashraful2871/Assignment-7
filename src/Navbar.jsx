@@ -1,4 +1,5 @@
-const Navbar = () => {
+/* eslint-disable react/prop-types */
+const Navbar = ({ freeCoin }) => {
   return (
     <div className="mb-9">
       <div className="navbar bg-base-100">
@@ -22,7 +23,7 @@ const Navbar = () => {
               <a>Schedules</a>
             </li>
             <li>
-              <a>$ 0 USD</a>
+              <a>$ {freeCoin} USD</a>
             </li>
           </ul>
         </div>

@@ -2,12 +2,23 @@ import PlayerSection from "./PlayerSection";
 import Selected from "./Selected";
 
 /* eslint-disable react/prop-types */
-const ButtonContainer = ({ handleIsActive, isActive }) => {
+const ButtonContainer = ({
+  handleIsActive,
+  isActive,
+  handleSelectPlayer,
+  selectPlayer,
+}) => {
   return (
     <div>
       <div className="flex justify-between items-center mb-8">
         <div>
-          <h1 className="font-bold text-2xl">Available Players</h1>
+          {isActive.active ? (
+            <h1 className="font-bold text-2xl">Available Players</h1>
+          ) : (
+            <h1 className="font-bold text-2xl">
+              Selected Player ({selectPlayer.length}/6)
+            </h1>
+          )}
         </div>
         <div className="flex gap-5">
           <button
@@ -28,14 +39,14 @@ const ButtonContainer = ({ handleIsActive, isActive }) => {
             }`}
             onClick={() => handleIsActive("selected")}
           >
-            selected (0)
+            selected ({selectPlayer.length})
           </button>
         </div>
       </div>
       {isActive.active ? (
-        <PlayerSection></PlayerSection>
+        <PlayerSection handleSelectPlayer={handleSelectPlayer}></PlayerSection>
       ) : (
-        <Selected></Selected>
+        <Selected selectPlayer={selectPlayer}></Selected>
       )}
     </div>
   );

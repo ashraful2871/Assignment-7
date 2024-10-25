@@ -11,6 +11,8 @@ function App() {
     active: true,
     status: "available",
   });
+  const [selectPlayer, setSelectPlayer] = useState([]);
+  const [freeCoin, setFreeCoin] = useState(0);
 
   const handleIsActive = (status) => {
     if (status == "available") {
@@ -23,14 +25,26 @@ function App() {
     }
   };
 
+  const handleSelectPlayer = (info) => {
+    const newSelectPlayer = [...selectPlayer, info];
+    setSelectPlayer(newSelectPlayer);
+  };
+
+  const handleFreeCoin = (number) => {
+    let increaseNumber = number + freeCoin;
+    setFreeCoin(increaseNumber);
+  };
+
   return (
     <>
       <main className="container mx-auto font-sora">
-        <Navbar></Navbar>
-        <Hero></Hero>
+        <Navbar freeCoin={freeCoin}></Navbar>
+        <Hero handleFreeCoin={handleFreeCoin}></Hero>
         <ButtonContainer
           isActive={isActive}
           handleIsActive={handleIsActive}
+          handleSelectPlayer={handleSelectPlayer}
+          selectPlayer={selectPlayer}
         ></ButtonContainer>
         <NewsLetter></NewsLetter>
       </main>

@@ -1,4 +1,5 @@
-const Hero = () => {
+/* eslint-disable react/prop-types */
+const Hero = ({ handleFreeCoin }) => {
   return (
     <div
       className="hero p-32 mb-20"
@@ -15,7 +16,10 @@ const Hero = () => {
             Beyond Boundaries Beyond Limits
           </p>
 
-          <button className="btn bg-[#E7FE29] text-black text-base font-bold hover:bg-[#E7FE29]">
+          <button
+            onClick={() => handleFreeCoin(15000)}
+            className="btn bg-[#E7FE29] text-black text-base font-bold hover:bg-[#E7FE29]"
+          >
             Claim Free Credit
           </button>
         </div>

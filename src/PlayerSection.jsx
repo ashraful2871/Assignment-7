@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import { useState } from "react";
 
-const PlayerSection = () => {
+const PlayerSection = ({ handleSelectPlayer }) => {
   const [information, setInformation] = useState([]);
   useEffect(() => {
     fetch("./player.json")
@@ -10,10 +11,10 @@ const PlayerSection = () => {
   }, []);
   return (
     <div className="mb-48">
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-6">
         {/* card 1 */}
         {information.map((info, idx) => (
-          <div key={idx} className="card bg-base-100  shadow-xl">
+          <div key={idx} className="card bg-base-100  shadow-xl border-2 p-4">
             <figure>
               <img
                 className="w-full h-72 rounded-2xl object-cover"
@@ -69,7 +70,10 @@ const PlayerSection = () => {
               <h3 className="font-bold">{info.battingType}</h3>
               <p className="font-bold">price: {info.biddingPrice}</p>
               <div className="card-actions justify-end">
-                <button className="btn hover:bg-[#E7FE29] font bold">
+                <button
+                  onClick={() => handleSelectPlayer(info)}
+                  className="btn hover:bg-[#E7FE29] font bold"
+                >
                   Choose Player
                 </button>
               </div>
