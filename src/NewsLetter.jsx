@@ -1,6 +1,6 @@
 const NewsLetter = () => {
   return (
-    <div className="container mx-auto p-5 bg-[#dad9d92a] rounded-3xl absolute top-[155%] border-2 border-white">
+    <div className="container mx-auto p-5 bg-[#dad9d92a] rounded-3xl mb-24 border-2 border-white">
       <div
         className="px-48 py-20 bg-img "
         style={{

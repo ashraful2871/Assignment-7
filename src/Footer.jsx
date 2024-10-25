@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className="bg-[#060919] p-10 text-[#ffffffa9] border-2 border-white">
       <img
-        className="ml-[50%] mt-72"
+        className="ml-[50%] mb-14"
         src="../src/assets/assets/logo-footer.png"
         alt=""
       />
