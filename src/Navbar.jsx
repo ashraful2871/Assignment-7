@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Navbar = ({ freeCoin }) => {
   return (
-    <div className="mb-9">
+    <div className="mb-9 mt-5">
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">

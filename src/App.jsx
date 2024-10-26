@@ -36,7 +36,6 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        // transition: bounce,
       });
       return;
     }
@@ -53,7 +52,6 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        // transition: bounce,
       });
       return;
     }
@@ -71,7 +69,6 @@ function App() {
       draggable: true,
       progress: undefined,
       theme: "light",
-      // transition: Bounce,
     });
     let increaseNumber = number + freeCoin;
     setFreeCoin(increaseNumber);
@@ -96,7 +93,6 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        // transition: Bounce,
       });
       return;
     }
@@ -113,7 +109,6 @@ function App() {
         draggable: true,
         progress: undefined,
         theme: "light",
-        // transition: Bounce,
       });
       setSelectPlayer([...selectPlayer, player]);
     }
@@ -131,7 +126,6 @@ function App() {
       draggable: true,
       progress: undefined,
       theme: "light",
-      // transition: Bounce,
     });
     const updatePlayer = selectPlayer.filter(
       (player) => player.playerId !== id

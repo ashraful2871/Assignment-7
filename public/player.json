@@ -49,7 +49,6 @@
     "bowlingType": "Right-arm offbreak",
     "biddingPrice": 800
   },
-
   {
     "playerId": 6,
     "name": "Ben Stokes",
@@ -59,5 +58,55 @@
     "battingType": "Left-hand bat",
     "bowlingType": "Right-arm medium",
     "biddingPrice": 300
+  },
+  {
+    "playerId": 7,
+    "name": "Glenn Maxwell",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/qp28Vwt/maxwell.jpg",
+    "role": "All-rounder",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off break",
+    "biddingPrice": 1200
+  },
+  {
+    "playerId": 8,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "image": "https://i.ibb.co.com/ThGN2F5/bumraha.jpg",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 1000
+  },
+  {
+    "playerId": 9,
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "image": "https://i.ibb.co.com/fSbL8jk/pet-cummins.webp",
+    "role": "Bowler",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm fast",
+    "biddingPrice": 950
+  },
+  {
+    "playerId": 10,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://i.ibb.co.com/VtYCZLX/trent-bold.jpg",
+    "role": "Bowler",
+    "battingType": "Left-hand bat",
+    "bowlingType": "Left-arm fast medium",
+    "biddingPrice": 850
+  },
+  {
+    "playerId": 11,
+    "name": "Mahmudullah",
+    "country": "Bangladesh",
+    "image": "https://i.ibb.co.com/jTdKBK9/Mahudullah.jpg",
+    "role": "All-rounder",
+    "battingType": "Right-hand bat",
+    "bowlingType": "Right-arm off break",
+    "biddingPrice": 650
   }
 ]

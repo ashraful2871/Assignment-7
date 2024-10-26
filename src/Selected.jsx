@@ -23,7 +23,7 @@ const Selected = ({ selectPlayer, handleRemovePlayer, handleIsActive }) => {
               <h3 className="text-2xl font-semibold">{sel.name}</h3>
               <p className="text-sm mt-1 font-black">{sel.battingType}</p>
               <p className="font-semibold">
-                <small>price: {sel.biddingPrice}</small>
+                <small>price: ${sel.biddingPrice}</small>
               </p>
             </div>
           </div>
