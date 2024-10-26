@@ -25,4 +25,4 @@
 
   ### 5. Project live link:
 
-  # [https://cheerful-frangollo-45e5c3.netlify.app/](https://cheerful-frangollo-45e5c3.netlify.app/)
+  # [https://glittery-tiramisu-e6ff46.netlify.app/](https://glittery-tiramisu-e6ff46.netlify.app/)
