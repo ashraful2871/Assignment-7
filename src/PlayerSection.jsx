@@ -12,7 +12,6 @@ const PlayerSection = ({ handleSelectPlayer }) => {
   return (
     <div className="mb-48">
       <div className="grid grid-cols-3 gap-6">
-        {/* card 1 */}
         {information.map((info, idx) => (
           <div key={idx} className="card bg-base-100  shadow-xl border-2 p-4">
             <figure>

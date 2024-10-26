@@ -1,8 +1,11 @@
+import NewsLetter from "./NewsLetter";
+
 const Footer = () => {
   return (
-    <div className="bg-[#060919] p-10 text-[#ffffffa9] border-2 border-white">
+    <div className="bg-[#060919] p-10 text-[#ffffffa9] border-2 border-white relative">
+      <NewsLetter></NewsLetter>
       <img
-        className="ml-[50%] mb-14"
+        className="ml-[50%] mb-14 mt-64"
         src="../src/assets/assets/logo-footer.png"
         alt=""
       />
@@ -37,7 +40,9 @@ const Footer = () => {
                 placeholder="Enter your email"
                 className="input input-bordered join-item"
               />
-              <button className="btn btn-primary join-item">Subscribe</button>
+              <button className="btn font-bold join-item bg-gradient-to-r from-pink-300 via-purple-400 to-yellow-500">
+                Subscribe
+              </button>
             </div>
           </fieldset>
         </form>

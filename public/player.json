@@ -41,14 +41,15 @@
   },
   {
     "playerId": 5,
-    "name": "Jasprit Bumrah",
+    "name": "Ruturaj Gaikwad",
     "country": "India",
-    "image": "https://i.ibb.co.com/sCLzgGJ/bum.jpg",
-    "role": "Bowler",
+    "image": "https://i.ibb.co.com/RN8rpbC/Ruturaj-Gaikwad.jpg",
+    "role": "Batsman",
     "battingType": "Right-hand bat",
-    "bowlingType": "Right-arm fast",
-    "biddingPrice": 950
+    "bowlingType": "Right-arm offbreak",
+    "biddingPrice": 800
   },
+
   {
     "playerId": 6,
     "name": "Ben Stokes",

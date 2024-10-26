@@ -1,10 +1,11 @@
 import Footer from "./Footer";
 import Hero from "./Hero";
 import Navbar from "./Navbar";
-import NewsLetter from "./NewsLetter";
 import "./App.css";
 import { useState } from "react";
 import ButtonContainer from "./ButtonContainer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [isActive, setIsActive] = useState({
@@ -26,14 +27,34 @@ function App() {
 
   const handleSelectPlayer = (info) => {
     if (selectPlayer.length >= 6) {
-      alert("you can only select up to 6 player");
+      toast.warn("you can only select up to 6 player!", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: bounce,
+      });
       return;
     }
     const isExist = selectPlayer.find(
       (prevPlayer) => prevPlayer.playerId === info.playerId
     );
     if (isExist) {
-      alert("player already added");
+      toast.error("player already added", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: bounce,
+      });
       return;
     }
     handleReducePrice(info.biddingPrice);
@@ -41,6 +62,17 @@ function App() {
   };
 
   const handleFreeCoin = (number) => {
+    toast.success("reword claim successful", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      // transition: Bounce,
+    });
     let increaseNumber = number + freeCoin;
     setFreeCoin(increaseNumber);
   };
@@ -55,13 +87,34 @@ function App() {
   //one player only one time add the selection tab
   const addPlayerQueue = (player) => {
     if (freeCoin === 0) {
-      alert("Not enough balance");
+      toast.error("Not enough balance !", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+      });
       return;
     }
     const isExist = selectPlayer.find(
       (prevPlayer) => prevPlayer.playerId === player.playerId
     );
     if (!isExist) {
+      toast.success(`${player.name} selected successfully`, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        // transition: Bounce,
+      });
       setSelectPlayer([...selectPlayer, player]);
     }
   };
@@ -69,6 +122,17 @@ function App() {
   //handle remove player from selected player
   const handleRemovePlayer = (id) => {
     //remove from want to remove player
+    toast.warn("player removed", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      // transition: Bounce,
+    });
     const updatePlayer = selectPlayer.filter(
       (player) => player.playerId !== id
     );
@@ -87,9 +151,9 @@ function App() {
           selectPlayer={selectPlayer}
           handleRemovePlayer={handleRemovePlayer}
         ></ButtonContainer>
-        <NewsLetter></NewsLetter>
       </main>
       <Footer></Footer>
+      <ToastContainer></ToastContainer>
     </>
   );
 }

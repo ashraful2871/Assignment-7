@@ -1,8 +1,28 @@
-# React + Vite
+# BPL-DREAM 11
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+### 1. project name:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- BPL-DREAM 11
+
+### 2. project brief description:
+
+- This project is based on cricket player choosing type. you can select player with your account
+  balances. And most attractive features is you claim free money unlimited time & this money will added your main balance. You can select up to six(6) player only. You can also remove player your selection tab.
+
+  ### 3. Technologies used:
+
+  - Tailwind
+  - react
+  - HTML
+
+  ### 4. key features:
+
+  - Free claim money option
+  - toggle button "Available" to "Selected"
+  - choose player and added to selected tab
+
+  ### 5. Project live link:
+
+  # [https://cheerful-frangollo-45e5c3.netlify.app/](https://cheerful-frangollo-45e5c3.netlify.app/)

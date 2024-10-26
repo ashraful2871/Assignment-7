@@ -40,7 +40,7 @@ const ButtonContainer = ({
             }`}
             onClick={() => handleIsActive("selected")}
           >
-            selected ({selectPlayer.length})
+            Selected ({selectPlayer.length})
           </button>
         </div>
       </div>

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 const Selected = ({ selectPlayer, handleRemovePlayer, handleIsActive }) => {
   return (
-    <div className="mb-8">
+    <div className="mb-32">
       {selectPlayer.map((sel, idx) => (
         <div
           key={idx}
