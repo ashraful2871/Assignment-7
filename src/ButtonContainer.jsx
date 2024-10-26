@@ -7,6 +7,7 @@ const ButtonContainer = ({
   isActive,
   handleSelectPlayer,
   selectPlayer,
+  handleRemovePlayer,
 }) => {
   return (
     <div>
@@ -46,7 +47,10 @@ const ButtonContainer = ({
       {isActive.active ? (
         <PlayerSection handleSelectPlayer={handleSelectPlayer}></PlayerSection>
       ) : (
-        <Selected selectPlayer={selectPlayer}></Selected>
+        <Selected
+          selectPlayer={selectPlayer}
+          handleRemovePlayer={handleRemovePlayer}
+        ></Selected>
       )}
     </div>
   );

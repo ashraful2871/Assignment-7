@@ -36,20 +36,35 @@ function App() {
 
   // reduce price when choose player
   const handleReducePrice = (price) => {
-    setFreeCoin((previousFreeCoin) => previousFreeCoin - price);
+    if (freeCoin > 0) {
+      setFreeCoin((previousFreeCoin) => previousFreeCoin - price);
+    }
   };
 
   //one player only one time add the selection tab
-
   const addPlayerQueue = (player) => {
-    const isExist = selectPlayer.find(
-      (prevPlayer) => prevPlayer.playerId === player.playerId
-    );
-    if (!isExist) {
-      setSelectPlayer([...selectPlayer, player]);
+    if (freeCoin === 0) {
+      alert("Not enough balance");
+      return;
     } else {
-      alert("already added");
+      const isExist = selectPlayer.find(
+        (prevPlayer) => prevPlayer.playerId === player.playerId
+      );
+      if (!isExist) {
+        setSelectPlayer([...selectPlayer, player]);
+      } else {
+        alert("already added");
+      }
     }
+  };
+
+  //handle remove player from selected player
+  const handleRemovePlayer = (id) => {
+    //remove from want to remove player
+    const updatePlayer = selectPlayer.filter(
+      (player) => player.playerId !== id
+    );
+    setSelectPlayer(updatePlayer);
   };
 
   return (
@@ -62,6 +77,7 @@ function App() {
           handleIsActive={handleIsActive}
           handleSelectPlayer={handleSelectPlayer}
           selectPlayer={selectPlayer}
+          handleRemovePlayer={handleRemovePlayer}
         ></ButtonContainer>
         <NewsLetter></NewsLetter>
       </main>

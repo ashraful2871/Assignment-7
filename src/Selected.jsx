@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-const Selected = ({ selectPlayer }) => {
+const Selected = ({ selectPlayer, handleRemovePlayer }) => {
   return (
     <div>
       {selectPlayer.map((sel, idx) => (
@@ -21,11 +21,17 @@ const Selected = ({ selectPlayer }) => {
             </div>
             <div>
               <h3 className="text-2xl font-semibold">{sel.name}</h3>
-              <p className="text-sm mt-1">{sel.battingType}</p>
+              <p className="text-sm mt-1 font-black">{sel.battingType}</p>
+              <p className="font-semibold">
+                <small>price: {sel.biddingPrice}</small>
+              </p>
             </div>
           </div>
           <div className="p-5">
-            <button className="text-red-500 btn bg-white hover:bg-white">
+            <button
+              onClick={() => handleRemovePlayer(sel.playerId)}
+              className="text-red-500 btn bg-white hover:bg-white"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
