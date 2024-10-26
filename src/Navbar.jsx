@@ -5,7 +5,7 @@ const Navbar = ({ freeCoin }) => {
       <div className="navbar bg-base-100">
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">
-            <img src="../src/assets/assets/logo.png" alt="" />
+            <img src="https://i.ibb.co.com/Y0Cq7Ps/logo.png" alt="" />
           </a>
         </div>
         <div className="flex-none">
