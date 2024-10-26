@@ -13,7 +13,6 @@ function App() {
   });
   const [selectPlayer, setSelectPlayer] = useState([]);
   const [freeCoin, setFreeCoin] = useState(0);
-
   const handleIsActive = (status) => {
     if (status == "available") {
       setIsActive({
@@ -26,13 +25,31 @@ function App() {
   };
 
   const handleSelectPlayer = (info) => {
-    const newSelectPlayer = [...selectPlayer, info];
-    setSelectPlayer(newSelectPlayer);
+    handleReducePrice(info.biddingPrice);
+    addPlayerQueue(info);
   };
 
   const handleFreeCoin = (number) => {
     let increaseNumber = number + freeCoin;
     setFreeCoin(increaseNumber);
+  };
+
+  // reduce price when choose player
+  const handleReducePrice = (price) => {
+    setFreeCoin((previousFreeCoin) => previousFreeCoin - price);
+  };
+
+  //one player only one time add the selection tab
+
+  const addPlayerQueue = (player) => {
+    const isExist = selectPlayer.find(
+      (prevPlayer) => prevPlayer.playerId === player.playerId
+    );
+    if (!isExist) {
+      setSelectPlayer([...selectPlayer, player]);
+    } else {
+      alert("already added");
+    }
   };
 
   return (
