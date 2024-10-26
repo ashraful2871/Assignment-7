@@ -25,4 +25,4 @@
 
   ### 5. Project live link:
 
-  # [https://glittery-tiramisu-e6ff46.netlify.app/](https://glittery-tiramisu-e6ff46.netlify.app/)
+  # [https://lovely-gumdrop-d71a3f.netlify.app/](https://lovely-gumdrop-d71a3f.netlify.app/)
