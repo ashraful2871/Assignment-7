@@ -50,6 +50,8 @@ const ButtonContainer = ({
         <Selected
           selectPlayer={selectPlayer}
           handleRemovePlayer={handleRemovePlayer}
+          isActive={isActive}
+          handleIsActive={handleIsActive}
         ></Selected>
       )}
     </div>

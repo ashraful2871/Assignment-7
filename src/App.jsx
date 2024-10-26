@@ -25,6 +25,17 @@ function App() {
   };
 
   const handleSelectPlayer = (info) => {
+    if (selectPlayer.length >= 6) {
+      alert("you can only select up to 6 player");
+      return;
+    }
+    const isExist = selectPlayer.find(
+      (prevPlayer) => prevPlayer.playerId === info.playerId
+    );
+    if (isExist) {
+      alert("player already added");
+      return;
+    }
     handleReducePrice(info.biddingPrice);
     addPlayerQueue(info);
   };
@@ -46,15 +57,12 @@ function App() {
     if (freeCoin === 0) {
       alert("Not enough balance");
       return;
-    } else {
-      const isExist = selectPlayer.find(
-        (prevPlayer) => prevPlayer.playerId === player.playerId
-      );
-      if (!isExist) {
-        setSelectPlayer([...selectPlayer, player]);
-      } else {
-        alert("already added");
-      }
+    }
+    const isExist = selectPlayer.find(
+      (prevPlayer) => prevPlayer.playerId === player.playerId
+    );
+    if (!isExist) {
+      setSelectPlayer([...selectPlayer, player]);
     }
   };
 

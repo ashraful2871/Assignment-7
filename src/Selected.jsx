@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
-const Selected = ({ selectPlayer, handleRemovePlayer }) => {
+const Selected = ({ selectPlayer, handleRemovePlayer, handleIsActive }) => {
   return (
-    <div>
+    <div className="mb-8">
       {selectPlayer.map((sel, idx) => (
         <div
           key={idx}
@@ -50,6 +50,14 @@ const Selected = ({ selectPlayer, handleRemovePlayer }) => {
           </div>
         </div>
       ))}
+      <div>
+        <button
+          onClick={() => handleIsActive("available")}
+          className="btn bg-[#E7FE29] text-black text-base font-bold hover:bg-[#E7FE29] border-2 border-black"
+        >
+          add more player
+        </button>
+      </div>
     </div>
   );
 };

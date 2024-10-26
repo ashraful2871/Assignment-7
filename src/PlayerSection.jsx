@@ -68,7 +68,7 @@ const PlayerSection = ({ handleSelectPlayer }) => {
 
               <h2 className="font-bold">Rating</h2>
               <h3 className="font-bold">{info.battingType}</h3>
-              <p className="font-bold">price: {info.biddingPrice}</p>
+              <p className="font-bold">price: ${info.biddingPrice}</p>
               <div className="card-actions justify-end">
                 <button
                   onClick={() => handleSelectPlayer(info)}
